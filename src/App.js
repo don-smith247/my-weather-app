@@ -109,7 +109,7 @@ const App = () => {
 
   return(
     <div className=' w-full h-screen bg-gradientBg bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center px-4 lg:px-0'>
-         {errorMsg && <div className=' w-full max-w-[90vw] lg:max-w-[300px] bg-[#ff208c] text-white absolute top-2 lg:top-5 p-4 capitalize rounded-md '>{`${errorMsg.response.data.message}`}</div>}
+         {errorMsg && <div className=' w-full max-w-[90vw] lg:max-w-[300px] bg-[red] text-white absolute top-2 lg:top-5 p-4 capitalize rounded-md '>{`${errorMsg.response.data.message}`}</div>}
          <form className= {`${animate ? 'animate-shake' : 'animate-none'} h-14 bg-black/30 w-full max-w-[350px] rounded-full backdrop-blur-[32px] mb-8`}>
             <div className=' h-full relative flex items-center justify-between p-2 '>
               <input onChange={(e)=>handleInput(e)} className=' flex-1 bg-transparent outline-none placeholder:text-white text-white text-[15px] font-light pl-6 h-full' type='text' placeholder='Serach by city or Country'/>
