@@ -109,14 +109,14 @@ const App = () => {
 
   return(
     <div className=' w-full h-screen bg-gradientBg bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center px-4 lg:px-0'>
-         {errorMsg && <div className=' w-full max-w-[90vw] lg:max-w-[450px] bg-[#ff208c] text-white absolute top-2 lg:top-10 p-4 capitalize rounded-md '>{`${errorMsg.response.data.message}`}</div>}
-         <form className= {`${animate ? 'animate-shake' : 'animate-none'} h-16 bg-black/30 w-full max-w-[450px] rounded-full backdrop-blur-[32px] mb-8`}>
+         {errorMsg && <div className=' w-full max-w-[90vw] lg:max-w-[300px] bg-[#ff208c] text-white absolute top-2 lg:top-5 p-4 capitalize rounded-md '>{`${errorMsg.response.data.message}`}</div>}
+         <form className= {`${animate ? 'animate-shake' : 'animate-none'} h-14 bg-black/30 w-full max-w-[350px] rounded-full backdrop-blur-[32px] mb-8`}>
             <div className=' h-full relative flex items-center justify-between p-2 '>
               <input onChange={(e)=>handleInput(e)} className=' flex-1 bg-transparent outline-none placeholder:text-white text-white text-[15px] font-light pl-6 h-full' type='text' placeholder='Serach by city or Country'/>
               <button onClick={(e)=> handleSubmit(e)} className=' bg-[#1ab8ed] w-20 h-12 rounded-full flex justify-center items-center transition hover:bg-[#15abdd]'><IoMdSearch className='2-xl text-white '/></button>
             </div>
          </form>
-        <div className='w-full bg-black/20 max-w-[450px] min-h-[584px] text-white backdrop-blur-[32px] rounded-[32px] py-12 px-6 '>
+        <div className='w-full bg-black/20 max-w-[350px] min-h-[300px] text-white backdrop-blur-[32px] rounded-[32px] py-12 px-6 '>
           {loading ? (
               <div className=' w-full h-full flex justify-center items-center '> <ImSpinner8 className='text-white text-5xl animate-spin'/></div>
           ) : ( 
@@ -134,19 +134,19 @@ const App = () => {
 
             <div className=' my-20 '>
              <div className=' flex justify-center items-center '>
-               <div className='text-[144px] leading-none font-light'>
+               <div className='text-[100px] leading-none font-light'>
                  {parseInt(data.main.temp)}
                </div>
-               <div className=' text-4xl '>
+               <div className=' text-3xl '>
                <TbTemperatureCelsius/>
                </div>
              </div>   
              <div className=' capitalize text-center '>{data.weather[0].description}</div>     
             </div>
 
-            <div className=' max-w-[378px] mx-auto flex flex-col gap-y-6 '>
+            <div className=' max-w-[378px] mx-auto flex flex-col gap-y-3 '>
                <div className=' flex justify-between '>
-                 <div className='flex items-center gap-x-2 '>
+                 <div className='flex items-center gap-[1px] '>
                    <div className=' text-[20px]'>
                      <BsEye/>
                    </div>
@@ -154,7 +154,7 @@ const App = () => {
                      Visibility <span className='  ml-2 '>{date.visibility / 1000} km</span>
                    </div>
                  </div>
-                 <div className='flex items-center gap-x-2 '>
+                 <div className='flex items-center gap-[1px] '>
                    <div className=' text-[20px]'>
                      <BsThermometer/>
                    </div>
